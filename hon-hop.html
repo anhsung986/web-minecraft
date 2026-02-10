@@ -8,8 +8,27 @@
 body{
   margin:0;
   font-family:system-ui;
-  background:linear-gradient(135deg,#0f172a,#1e293b);
   color:white;
+  overflow-x:hidden;
+
+  background: linear-gradient(
+    135deg,
+    #0f172a,
+    #1e3a8a,
+    #312e81,
+    #0f172a
+  );
+
+  background-size: 400% 400%;
+  animation: bgMove 12s ease infinite;
+}
+
+/* chuyển động nền */
+@keyframes bgMove{
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
+}
 }
 
 header{
