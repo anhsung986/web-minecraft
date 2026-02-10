@@ -2,81 +2,93 @@
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
-<title>🎯 Hỗn hợp server</title>
+<title>Server Hỗn Hợp</title>
 
 <style>
 body{
-font-family: Arial;
-background:#0f172a;
-color:white;
-padding:20px;
+  margin:0;
+  font-family:sans-serif;
+  background:linear-gradient(135deg,#1d3557,#457b9d);
+  color:white;
+}
+
+header{
+  padding:40px 20px;
+  text-align:center;
 }
 
 h1{
-text-align:center;
-margin-bottom:20px;
+  margin:0;
+  font-size:28px;
 }
 
-.server{
-background:#1e293b;
-padding:15px;
-margin:10px 0;
-border-radius:12px;
-cursor:pointer;
-transition:.2s;
+.container{
+  padding:20px;
 }
 
-.server:hover{
-background:#334155;
-transform:scale(1.02);
+.card{
+  background:rgba(255,255,255,0.1);
+  border-radius:15px;
+  padding:18px;
+  margin-bottom:15px;
 }
 
-.back{
-display:block;
-text-align:center;
-margin-top:20px;
-color:#38bdf8;
-text-decoration:none;
-font-size:18px;
+.card h2{
+  margin:0;
+}
+
+.card a{
+  color:#90e0ef;
+  text-decoration:none;
+}
+
+.card p{
+  margin:5px 0 0;
+  opacity:0.85;
 }
 </style>
-
-<script>
-function copyIP(ip){
-navigator.clipboard.writeText(ip);
-alert("✅ Đã copy IP:\n"+ip);
-}
-</script>
-
 </head>
 
 <body>
 
-<h1>🎯 Hỗn hợp (nhiều mode)</h1>
+<header>
+<h1>🌍 Server Hỗn Hợp</h1>
+<p>Mini game • Survival • PvP</p>
+</header>
 
-<div class="server" onclick="copyIP('play.jartex.fun')">
-Jartex — play.jartex.fun<br>
-Mini game + survival + PvP
+<div class="container">
+
+<div class="card">
+<h2>Jartex</h2>
+<a href="#">play.jartex.fun</a>
+<p>Mini game + Survival + PvP</p>
 </div>
 
-<div class="server" onclick="copyIP('extremecraft.net')">
-ExtremeCraft — extremecraft.net<br>
-Mini game + survival + PvP
+<div class="card">
+<h2>ExtremeCraft</h2>
+<a href="#">extremecraft.net</a>
+<p>Mini game + Survival</p>
 </div>
 
-<div class="server" onclick="copyIP('mc.hyperspeed.net')">
-HyperSpeed — mc.hyperspeed.net<br>
-Mini game + PvP
+<div class="card">
+<h2>LokaMC</h2>
+<a href="#">play.lokamc.com</a>
+<p>RPG + PvP</p>
 </div>
 
-<div class="server" onclick="copyIP('play.lokamc.com')">
-LokaMC — play.lokamc.com<br>
-RPG + PvP
+<div class="card">
+<h2>Herobrine</h2>
+<a href="#">play.herobrine.org</a>
+<p>Mini game + PvP</p>
 </div>
 
-<div class="server" onclick="copyIP('play.herobrine.org')">
-Herobrine — play.herobrine.org<br>
-Mini game + PvP
+<div class="card">
+<h2>Twerion</h2>
+<a href="#">play.twerion.net</a>
+<p>Mini game + Survival</p>
 </div>
 
-<div class
+</div>
+
+</body>
+</html>
