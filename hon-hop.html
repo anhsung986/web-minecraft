@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <title>Server Hỗn Hợp</title>
-  const servers = [
 
 <style>
 body{
@@ -15,11 +14,7 @@ body{
 
 header{
   text-align:center;
-  padding:30px 15px;
-}
-
-h1{
-  margin:0;
+  padding:30px;
 }
 
 .back{
@@ -31,12 +26,6 @@ h1{
   text-decoration:none;
   border-radius:10px;
   font-weight:bold;
-  transition:.2s;
-}
-
-.back:hover{
-  background:#0ea5e9;
-  transform:scale(1.05);
 }
 
 .container{
@@ -51,27 +40,51 @@ h1{
   margin:12px 0;
   border-radius:15px;
   border:1px solid rgba(255,255,255,0.1);
-  transition:.25s;
+  transition:.2s;
 }
 
 .card:hover{
   background:rgba(255,255,255,0.12);
-  transform:translateY(-3px);
 }
 
 .name{
-  font-size:18px;
   font-weight:bold;
+  font-size:18px;
 }
 
 .ip{
   color:#38bdf8;
-  font-weight:bold;
+  margin:5px 0;
 }
 
 .desc{
   opacity:.8;
   font-size:14px;
+}
+
+.copy{
+  margin-top:8px;
+  padding:6px 12px;
+  background:#22c55e;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:bold;
+}
+
+.copy:hover{
+  background:#16a34a;
+}
+
+.toast{
+  position:fixed;
+  bottom:20px;
+  left:50%;
+  transform:translateX(-50%);
+  background:#22c55e;
+  padding:10px 18px;
+  border-radius:8px;
+  display:none;
 }
 </style>
 </head>
@@ -82,10 +95,11 @@ h1{
 
 <header>
 <h1>🎯 Server Hỗn Hợp</h1>
-<p>Nhiều mode: Mini game • Survival • PvP • RPG</p>
 </header>
 
-<div class="container">
+<div class="container" id="list"></div>
+
+<div class="toast" id="toast">✅ Đã sao chép IP!</div>
 
 <script>
 const servers = [
@@ -114,19 +128,25 @@ const servers = [
 ["InfinityRealm","mc.infinityrealm.net","Survival + PvP"]
 ];
 
-const container = document.querySelector(".container");
+const list = document.getElementById("list");
 
 servers.forEach(s=>{
-  container.innerHTML += `
+  list.innerHTML += `
   <div class="card">
     <div class="name">${s[0]}</div>
     <div class="ip">${s[1]}</div>
     <div class="desc">${s[2]}</div>
+    <button class="copy" onclick="copyIP('${s[1]}')">📋 Sao chép IP</button>
   </div>`;
 });
-</script>
 
-</div>
+function copyIP(ip){
+  navigator.clipboard.writeText(ip);
+  const t = document.getElementById("toast");
+  t.style.display="block";
+  setTimeout(()=>t.style.display="none",1500);
+}
+</script>
 
 </body>
 </html>
