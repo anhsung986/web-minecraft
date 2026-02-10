@@ -1,13 +1,138 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>RPG / Sandbox</title>
+
+<style>
+body{
+  margin:0;
+  font-family:system-ui;
+  background:linear-gradient(135deg,#1a0f2e,#0f172a);
+  color:white;
+}
+
+header{
+  text-align:center;
+  padding:30px;
+}
+
+.back{
+  display:inline-block;
+  margin:15px;
+  padding:10px 15px;
+  background:#38bdf8;
+  color:black;
+  text-decoration:none;
+  border-radius:10px;
+  font-weight:bold;
+}
+
+.container{
+  max-width:800px;
+  margin:auto;
+  padding:10px;
+}
+
+.card{
+  background:rgba(255,255,255,0.07);
+  padding:16px;
+  margin:12px 0;
+  border-radius:15px;
+  border:1px solid rgba(255,255,255,0.1);
+  transition:.2s;
+}
+
+.card:hover{
+  background:rgba(255,255,255,0.12);
+}
+
+.name{
+  font-weight:bold;
+  font-size:18px;
+}
+
+.ip{
+  color:#a78bfa;
+  margin:5px 0;
+}
+
+.desc{
+  opacity:.8;
+  font-size:14px;
+}
+
+.copy{
+  margin-top:8px;
+  padding:6px 12px;
+  background:#22c55e;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:bold;
+}
+
+.copy:hover{
+  background:#16a34a;
+}
+
+.toast{
+  position:fixed;
+  bottom:20px;
+  left:50%;
+  transform:translateX(-50%);
+  background:#22c55e;
+  padding:10px 18px;
+  border-radius:8px;
+  display:none;
+}
+</style>
+</head>
+
+<body>
+
+<a href="index.html" class="back">⬅ Trang chủ</a>
+
+<header>
 <h1>🌍 RPG / Sandbox đặc biệt</h1>
+</header>
 
-<div class="server">Minewind — mc.minewind.net<br>Survival hardcore</div>
-<div class="server">NationsGlory — mc.nationsglory.com<br>Roleplay quốc gia</div>
-<div class="server">Ventureland — mc.ventureland.net<br>RPG phiêu lưu</div>
-<div class="server">RoyalCraft — mc.royalcraft.org<br>Survival RPG</div>
-<div class="server">FusionCraft — mc.fusioncraft.org<br>Survival nâng cao</div>
-<div class="server">MysticCraft — mc.mysticcraft.net<br>RPG + skill</div>
-<div class="server">GalaxyCraft — mc.galaxycraft.net<br>Survival sci-fi</div>
-<div class="server">CosmosMC — play.cosmosmc.org<br>RPG + survival</div>
-<div class="server">FantasyCraft — mc.fantasycraft.org<br>Fantasy RPG</div>
+<div class="container" id="list"></div>
 
-<a href="index.html">⬅ Quay lại</a>
+<div class="toast" id="toast">✅ Đã sao chép IP!</div>
+
+<script>
+const servers = [
+["Minewind","mc.minewind.net","Survival hardcore"],
+["NationsGlory","mc.nationsglory.com","Roleplay quốc gia"],
+["Ventureland","mc.ventureland.net","RPG phiêu lưu"],
+["RoyalCraft","mc.royalcraft.org","Survival RPG"],
+["FusionCraft","mc.fusioncraft.org","Survival nâng cao"],
+["MysticCraft","mc.mysticcraft.net","RPG + skill"],
+["GalaxyCraft","mc.galaxycraft.net","Survival sci-fi"],
+["CosmosMC","play.cosmosmc.org","RPG + survival"],
+["FantasyCraft","mc.fantasycraft.org","Fantasy RPG"]
+];
+
+const list = document.getElementById("list");
+
+servers.forEach(s=>{
+  list.innerHTML += `
+  <div class="card">
+    <div class="name">${s[0]}</div>
+    <div class="ip">${s[1]}</div>
+    <div class="desc">${s[2]}</div>
+    <button class="copy" onclick="copyIP('${s[1]}')">📋 Sao chép IP</button>
+  </div>`;
+});
+
+function copyIP(ip){
+  navigator.clipboard.writeText(ip);
+  const t = document.getElementById("toast");
+  t.style.display="block";
+  setTimeout(()=>t.style.display="none",1500);
+}
+</script>
+
+</body>
+</html>
