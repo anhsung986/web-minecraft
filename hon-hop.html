@@ -2,59 +2,136 @@
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Trung Tâm Server</title>
+<title>Server Hỗn Hợp</title>
 
 <style>
-body{
-margin:0;
-font-family:Arial;
-background:linear-gradient(135deg,#0f172a,#1e293b);
-color:white;
-text-align:center;
+*{
+  box-sizing:border-box;
 }
 
-h1{padding:30px 10px;}
+body{
+  margin:0;
+  font-family:system-ui, sans-serif;
+  background:linear-gradient(135deg,#0f172a,#1e293b);
+  color:white;
+}
 
-.grid{
-display:grid;
-gap:15px;
-padding:20px;
-max-width:900px;
-margin:auto;
+/* HEADER */
+
+header{
+  text-align:center;
+  padding:35px 20px 10px;
+}
+
+h1{
+  margin:0;
+  font-size:30px;
+}
+
+.sub{
+  opacity:.7;
+  margin-top:5px;
+}
+
+/* BACK BUTTON */
+
+.back{
+  display:inline-block;
+  margin:20px;
+  padding:10px 16px;
+  background:#38bdf8;
+  color:black;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:bold;
+  transition:.2s;
+}
+
+.back:hover{
+  background:#0ea5e9;
+  transform:scale(1.05);
+}
+
+/* CARD LIST */
+
+.container{
+  padding:20px;
+  max-width:700px;
+  margin:auto;
 }
 
 .card{
-background:rgba(255,255,255,0.1);
-padding:18px;
-border-radius:12px;
-text-decoration:none;
-color:white;
-font-size:18px;
-transition:0.2s;
+  background:rgba(255,255,255,0.06);
+  border-radius:18px;
+  padding:18px;
+  margin-bottom:15px;
+  backdrop-filter:blur(10px);
+  transition:.25s;
+  border:1px solid rgba(255,255,255,0.08);
 }
 
 .card:hover{
-background:rgba(255,255,255,0.25);
-transform:translateY(-5px);
+  transform:translateY(-4px);
+  background:rgba(255,255,255,0.1);
 }
+
+.card h2{
+  margin:0 0 6px;
+}
+
+.ip{
+  color:#38bdf8;
+  font-weight:bold;
+}
+
+.desc{
+  opacity:.8;
+  font-size:14px;
+}
+
 </style>
 </head>
 
 <body>
 
-<h1>🌍 Trung Tâm Danh Sách Server</h1>
+<a href="index.html" class="back">⬅ Quay lại trang chủ</a>
 
-<div class="grid">
+<header>
+<h1>🌍 Server Hỗn Hợp</h1>
+<div class="sub">Mini game • Survival • PvP</div>
+</header>
 
-<a class="card" href="hon-hop.html">🎯 Server Hỗn Hợp</a>
-<a class="card" href="mini_game.html">🎲 Mini Game</a>
-<a class="card" href="survival.html">🏹 Survival / SMP</a>
-<a class="card" href="pvp.html">⚔ PvP</a>
-<a class="card" href="prison.html">⛏ Prison / Skyblock</a>
-<a class="card" href="pokemon.html">🐉 Pokémon RPG</a>
-<a class="card" href="rpg.html">🌌 RPG Sandbox</a>
-<a class="card" href="sv-premium.html">⭐ Server Premium</a>
+<div class="container">
+
+<div class="card">
+<h2>Jartex</h2>
+<div class="ip">play.jartex.fun</div>
+<div class="desc">Mini game + Survival + PvP</div>
+</div>
+
+<div class="card">
+<h2>ExtremeCraft</h2>
+<div class="ip">extremecraft.net</div>
+<div class="desc">Mini game + Survival</div>
+</div>
+
+<div class="card">
+<h2>LokaMC</h2>
+<div class="ip">play.lokamc.com</div>
+<div class="desc">RPG + PvP</div>
+</div>
+
+<div class="card">
+<h2>Herobrine</h2>
+<div class="ip">play.herobrine.org</div>
+<div class="desc">Mini game + PvP</div>
+</div>
+
+<div class="card">
+<h2>Twerion</h2>
+<div class="ip">play.twerion.net</div>
+<div class="desc">Mini game + Survival</div>
+</div>
 
 </div>
 
