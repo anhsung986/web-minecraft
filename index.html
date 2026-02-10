@@ -1,45 +1,62 @@
-<!DOCTYPE html><html lang="vi">
+<!DOCTYPE html>
+<html lang="vi">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Trung Tâm Server</title>
+
 <style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #141e30, #243b55);
-  color: white;
-}header { text-align: center; padding: 30px 15px; }
+body{
+margin:0;
+font-family:Arial;
+background:linear-gradient(135deg,#0f172a,#1e293b);
+color:white;
+text-align:center;
+}
 
-.grid { display: grid; gap: 16px; padding: 20px; max-width: 900px; margin: auto; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+h1{padding:30px 10px;}
 
-.card { background: rgba(255,255,255,0.1); border-radius: 14px; padding: 18px; text-align: center; text-decoration: none; color: white; transition: 0.2s; }
+.grid{
+display:grid;
+gap:15px;
+padding:20px;
+max-width:900px;
+margin:auto;
+}
 
-.card:hover { transform: translateY(-5px); background: rgba(255,255,255,0.2); }
+.card{
+background:rgba(255,255,255,0.1);
+padding:18px;
+border-radius:12px;
+text-decoration:none;
+color:white;
+font-size:18px;
+transition:0.2s;
+}
 
-footer { text-align: center; padding: 15px; opacity: 0.7; } </style>
-
+.card:hover{
+background:rgba(255,255,255,0.25);
+transform:translateY(-5px);
+}
+</style>
 </head>
-<body><header>
-  <h1>🌐 Trung Tâm Danh Sách Server</h1>
-  <p>Chọn loại server để xem danh sách</p>
-</header><div class="grid"><a class="card" href="Hh(mode).html">
-🎯 Server Hỗn Hợp
-</a><a class="card" href="http://localhost:8158/Mini_game.html">
-🎲 Mini Game Servers
-</a><a class="card" href="http://localhost:8158/Survival_SMP_Towny.html">
-🏹 Survival / SMP
-</a><a class="card" href="http://localhost:8158/PvP_Practice_Factions.html">
-⚔ PvP Servers
-</a><a class="card" href="http://localhost:8158/Prison_Skyblock.html">
-⛏ Prison / Skyblock
-</a><a class="card" href="http://localhost:8158/Pokémon_RPG.html">
-🐉 Pokémon / RPG
-</a><a class="card" href="http://localhost:8158/RPG_sandbox-đặc-biệt.html">
-🌍 RPG Sandbox
-</a><a class="card" href="http://localhost:8158/Sv_premiun.html">
-⭐ Server Premium
-</a></div><footer>
-© 2026 Server Hub
-</footer></body>
+
+<body>
+
+<h1>🌍 Trung Tâm Danh Sách Server</h1>
+
+<div class="grid">
+
+<a class="card" href="hon-hop.html">🎯 Server Hỗn Hợp</a>
+<a class="card" href="mini_game.html">🎲 Mini Game</a>
+<a class="card" href="survival.html">🏹 Survival / SMP</a>
+<a class="card" href="pvp.html">⚔ PvP</a>
+<a class="card" href="prison.html">⛏ Prison / Skyblock</a>
+<a class="card" href="pokemon.html">🐉 Pokémon RPG</a>
+<a class="card" href="rpg.html">🌌 RPG Sandbox</a>
+<a class="card" href="sv-premium.html">⭐ Server Premium</a>
+
+</div>
+
+</body>
 </html>
