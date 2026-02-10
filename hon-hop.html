@@ -2,91 +2,59 @@
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
-<title>Server Hỗn Hợp</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trung Tâm Server</title>
 
 <style>
 body{
-  margin:0;
-  font-family:sans-serif;
-  background:linear-gradient(135deg,#1d3557,#457b9d);
-  color:white;
+margin:0;
+font-family:Arial;
+background:linear-gradient(135deg,#0f172a,#1e293b);
+color:white;
+text-align:center;
 }
 
-header{
-  padding:40px 20px;
-  text-align:center;
-}
+h1{padding:30px 10px;}
 
-h1{
-  margin:0;
-  font-size:28px;
-}
-
-.container{
-  padding:20px;
+.grid{
+display:grid;
+gap:15px;
+padding:20px;
+max-width:900px;
+margin:auto;
 }
 
 .card{
-  background:rgba(255,255,255,0.1);
-  border-radius:15px;
-  padding:18px;
-  margin-bottom:15px;
+background:rgba(255,255,255,0.1);
+padding:18px;
+border-radius:12px;
+text-decoration:none;
+color:white;
+font-size:18px;
+transition:0.2s;
 }
 
-.card h2{
-  margin:0;
-}
-
-.card a{
-  color:#90e0ef;
-  text-decoration:none;
-}
-
-.card p{
-  margin:5px 0 0;
-  opacity:0.85;
+.card:hover{
+background:rgba(255,255,255,0.25);
+transform:translateY(-5px);
 }
 </style>
 </head>
 
 <body>
 
-<header>
-<h1>🌍 Server Hỗn Hợp</h1>
-<p>Mini game • Survival • PvP</p>
-</header>
+<h1>🌍 Trung Tâm Danh Sách Server</h1>
 
-<div class="container">
+<div class="grid">
 
-<div class="card">
-<h2>Jartex</h2>
-<a href="#">play.jartex.fun</a>
-<p>Mini game + Survival + PvP</p>
-</div>
-
-<div class="card">
-<h2>ExtremeCraft</h2>
-<a href="#">extremecraft.net</a>
-<p>Mini game + Survival</p>
-</div>
-
-<div class="card">
-<h2>LokaMC</h2>
-<a href="#">play.lokamc.com</a>
-<p>RPG + PvP</p>
-</div>
-
-<div class="card">
-<h2>Herobrine</h2>
-<a href="#">play.herobrine.org</a>
-<p>Mini game + PvP</p>
-</div>
-
-<div class="card">
-<h2>Twerion</h2>
-<a href="#">play.twerion.net</a>
-<p>Mini game + Survival</p>
-</div>
+<a class="card" href="hon-hop.html">🎯 Server Hỗn Hợp</a>
+<a class="card" href="mini_game.html">🎲 Mini Game</a>
+<a class="card" href="survival.html">🏹 Survival / SMP</a>
+<a class="card" href="pvp.html">⚔ PvP</a>
+<a class="card" href="prison.html">⛏ Prison / Skyblock</a>
+<a class="card" href="pokemon.html">🐉 Pokémon RPG</a>
+<a class="card" href="rpg.html">🌌 RPG Sandbox</a>
+<a class="card" href="sv-premium.html">⭐ Server Premium</a>
 
 </div>
 
