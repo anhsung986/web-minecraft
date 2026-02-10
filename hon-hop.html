@@ -5,44 +5,30 @@
 <title>Server Hỗn Hợp</title>
 
 <style>
-*{
-  box-sizing:border-box;
-}
-
 body{
   margin:0;
-  font-family:system-ui, sans-serif;
+  font-family:system-ui;
   background:linear-gradient(135deg,#0f172a,#1e293b);
   color:white;
 }
 
-/* HEADER */
-
 header{
   text-align:center;
-  padding:35px 20px 10px;
+  padding:30px 15px;
 }
 
 h1{
   margin:0;
-  font-size:30px;
 }
-
-.sub{
-  opacity:.7;
-  margin-top:5px;
-}
-
-/* BACK BUTTON */
 
 .back{
   display:inline-block;
-  margin:20px;
-  padding:10px 16px;
+  margin:15px;
+  padding:10px 15px;
   background:#38bdf8;
   color:black;
-  border-radius:10px;
   text-decoration:none;
+  border-radius:10px;
   font-weight:bold;
   transition:.2s;
 }
@@ -52,31 +38,29 @@ h1{
   transform:scale(1.05);
 }
 
-/* CARD LIST */
-
 .container{
-  padding:20px;
-  max-width:700px;
+  max-width:800px;
   margin:auto;
+  padding:10px;
 }
 
 .card{
-  background:rgba(255,255,255,0.06);
-  border-radius:18px;
-  padding:18px;
-  margin-bottom:15px;
-  backdrop-filter:blur(10px);
+  background:rgba(255,255,255,0.07);
+  padding:16px;
+  margin:12px 0;
+  border-radius:15px;
+  border:1px solid rgba(255,255,255,0.1);
   transition:.25s;
-  border:1px solid rgba(255,255,255,0.08);
 }
 
 .card:hover{
-  transform:translateY(-4px);
-  background:rgba(255,255,255,0.1);
+  background:rgba(255,255,255,0.12);
+  transform:translateY(-3px);
 }
 
-.card h2{
-  margin:0 0 6px;
+.name{
+  font-size:18px;
+  font-weight:bold;
 }
 
 .ip{
@@ -88,50 +72,58 @@ h1{
   opacity:.8;
   font-size:14px;
 }
-
 </style>
 </head>
 
 <body>
 
-<a href="index.html" class="back">⬅ Quay lại trang chủ</a>
+<a href="index.html" class="back">⬅ Trang chủ</a>
 
 <header>
-<h1>🌍 Server Hỗn Hợp</h1>
-<div class="sub">Mini game • Survival • PvP</div>
+<h1>🎯 Server Hỗn Hợp</h1>
+<p>Nhiều mode: Mini game • Survival • PvP • RPG</p>
 </header>
 
 <div class="container">
 
-<div class="card">
-<h2>Jartex</h2>
-<div class="ip">play.jartex.fun</div>
-<div class="desc">Mini game + Survival + PvP</div>
-</div>
+<script>
+const servers = [
+["Jartex","play.jartex.fun","Mini game + Survival + PvP"],
+["ExtremeCraft","extremecraft.net","Mini game + Survival + PvP"],
+["HyperSpeed","mc.hyperspeed.net","Mini game + PvP"],
+["LokaMC","play.lokamc.com","RPG + PvP"],
+["Herobrine","play.herobrine.org","Mini game + PvP"],
+["Twerion","play.twerion.net","Mini game + Survival"],
+["StormCraft","play.stormcraft.net","Survival + PvP"],
+["NovaCraft","play.novacraft.org","Mini game + Survival"],
+["VoidCraft","mc.voidcraft.net","Survival + PvP"],
+["EpicWorld","mc.epicworld.gg","Mini game + RPG"],
+["CelestialMC","play.celestialmc.net","Survival + PvP"],
+["RiftCraft","mc.riftcraft.org","RPG + Survival"],
+["SkyRealm","mc.skyrealm.net","Survival + Skyblock"],
+["EternalCraft","mc.eternalcraft.net","Survival + PvP"],
+["StarboundMC","play.starboundmc.net","Mini game + Survival"],
+["ImmortalCraft","play.immortalcraft.net","RPG + PvP"],
+["VentureCraft","mc.venturecraft.org","Survival + RPG"],
+["PrimeCraft","mc.primecraft.net","Survival + Mini game"],
+["ValencyMC","play.valencymc.net","Survival + PvP"],
+["ArcadiaCraft","mc.arcadiacraft.net","RPG + Survival"],
+["UltimateMC","play.ultimatemc.net","Mini game + PvP"],
+["InfinityCraft","mc.infinitycraft.net","Survival + RPG"],
+["InfinityRealm","mc.infinityrealm.net","Survival + PvP"]
+];
 
-<div class="card">
-<h2>ExtremeCraft</h2>
-<div class="ip">extremecraft.net</div>
-<div class="desc">Mini game + Survival</div>
-</div>
+const container = document.querySelector(".container");
 
-<div class="card">
-<h2>LokaMC</h2>
-<div class="ip">play.lokamc.com</div>
-<div class="desc">RPG + PvP</div>
-</div>
-
-<div class="card">
-<h2>Herobrine</h2>
-<div class="ip">play.herobrine.org</div>
-<div class="desc">Mini game + PvP</div>
-</div>
-
-<div class="card">
-<h2>Twerion</h2>
-<div class="ip">play.twerion.net</div>
-<div class="desc">Mini game + Survival</div>
-</div>
+servers.forEach(s=>{
+  container.innerHTML += `
+  <div class="card">
+    <div class="name">${s[0]}</div>
+    <div class="ip">${s[1]}</div>
+    <div class="desc">${s[2]}</div>
+  </div>`;
+});
+</script>
 
 </div>
 
